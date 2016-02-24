@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B449C0DE-FDFC-41B8-8F5B-79BBFBA8DCDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voice2</RootNamespace>
+    <AssemblyName>Voice2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Mail, Version=3.0.15091.1036, Culture=neutral, PublicKeyToken=6dc438ab78a525b3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Limilabs\Mail\Redistributables\Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.7.3\lib\net35\NAudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit">
+      <HintPath>C:\Program Files (x86)\NUnit 2.6.4\bin\nunit.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Email_comRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_comRecord.Designer.cs">
+      <DependentUpon>Email_comRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Inbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Inbox.Designer.cs">
+      <DependentUpon>Email_Inbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Sent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Sent.Designer.cs">
+      <DependentUpon>Email_Sent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skype_AddNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skype_AddNew.Designer.cs">
+      <DependentUpon>Skype_AddNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skype_Call.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skype_Call.Designer.cs">
+      <DependentUpon>Skype_Call.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skype_Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skype_Contact.Designer.cs">
+      <DependentUpon>Skype_Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpeechRecognizer.cs" />
+    <Compile Include="synth.cs" />
+    <Compile Include="welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcome.Designer.cs">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions.Designer.cs">
+      <DependentUpon>Functions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skype.Designer.cs">
+      <DependentUpon>Skype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Login.Designer.cs">
+      <DependentUpon>Email_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_AddNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_AddNew.Designer.cs">
+      <DependentUpon>Email_AddNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Options.Designer.cs">
+      <DependentUpon>Email_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Compose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Compose.Designer.cs">
+      <DependentUpon>Email_Compose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skype_LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skype_LogIn.Designer.cs">
+      <DependentUpon>Skype_LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Email_comRecord.resx">
+      <DependentUpon>Email_comRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Inbox.resx">
+      <DependentUpon>Email_Inbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Sent.resx">
+      <DependentUpon>Email_Sent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skype_AddNew.resx">
+      <DependentUpon>Skype_AddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skype_Call.resx">
+      <DependentUpon>Skype_Call.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skype_Contact.resx">
+      <DependentUpon>Skype_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions.resx">
+      <DependentUpon>Functions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skype.resx">
+      <DependentUpon>Skype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Login.resx">
+      <DependentUpon>Email_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_AddNew.resx">
+      <DependentUpon>Email_AddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Options.resx">
+      <DependentUpon>Email_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Compose.resx">
+      <DependentUpon>Email_Compose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skype_LogIn.resx">
+      <DependentUpon>Skype_LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="imapijpnLib">
+      <Guid>{00D25261-A9E4-40B2-BF1E-A8A13DF2542A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="imapikorLib">
+      <Guid>{ACDF1C98-A273-43B0-959D-6935F7A723BE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SKYPE4COMLib">
+      <Guid>{03282B5D-B38F-469D-849A-09B0A7F4881B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SkypeIEPluginLib">
+      <Guid>{E58E25D2-3FD0-4823-8AA9-A476F701410A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SpeechLib">
+      <Guid>{C866CA3A-32F7-11D2-9602-00C04F8EE628}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
